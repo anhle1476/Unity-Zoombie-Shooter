@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Script
+namespace Script.Base.Fighting
 {
     public class Health : MonoBehaviour, IDamageable
     {

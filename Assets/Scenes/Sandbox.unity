@@ -3299,7 +3299,7 @@ PrefabInstance:
       objectReference: {fileID: 1689849748}
     - target: {fileID: 3320491316962663085, guid: dc82791328b6afe48bc939076057bd69, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3320491316962663085, guid: dc82791328b6afe48bc939076057bd69, type: 3}
       propertyPath: chaseRange

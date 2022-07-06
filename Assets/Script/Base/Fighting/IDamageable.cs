@@ -1,4 +1,4 @@
-﻿namespace Script
+﻿namespace Script.Base.Fighting
 {
     public interface IDamageable
     {

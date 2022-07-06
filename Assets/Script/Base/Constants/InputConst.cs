@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-
-namespace Script
+﻿namespace Script.Base.Constants
 {
     public static class InputConst
     {

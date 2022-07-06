@@ -1,4 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Script.Base.Constants;
+using Script.Base.Fighting;
+using Script.Effects;
 using UnityEngine;
 
 namespace Script
@@ -7,8 +12,11 @@ namespace Script
     {
         [SerializeField] 
         private Camera FPCamera;
-        [SerializeField]
-        private ParticleSystem muzzleFlashVFX;
+
+        [SerializeField] private GameObject muzzleFlash;
+        [SerializeField] private AutoDisableFX hitEffect;
+        
+        private List<ParticleSystem> _muzzleFlashVFXs = new List<ParticleSystem>();
 
         [SerializeField] 
         [Range(0.1f, 10000f)]
@@ -16,6 +24,8 @@ namespace Script
         [SerializeField]
         [Range(1, 10000)]
         private int weaponDamage = 30;
+
+        private AutoDisableFXPool _hitEffectVFXPool;
         
         private void Start()
         {
@@ -24,16 +34,18 @@ namespace Script
                FPCamera = GetComponentInParent<Camera>();
             }
 
-            if (muzzleFlashVFX)
+            if (muzzleFlash)
             {
-                muzzleFlashVFX = GetComponentInChildren<ParticleSystem>();
+                _muzzleFlashVFXs = muzzleFlash.GetComponentsInChildren<ParticleSystem>().ToList();
             }
+
+            _hitEffectVFXPool = new AutoDisableFXPool(hitEffect);
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetButtonDown(InputConst.FIRE_1))
+            if (Input.GetButton(InputConst.FIRE_1))
             {
                 Shoot();
                 PlayMuzzleFlash();
@@ -51,14 +63,23 @@ namespace Script
                     damageAmount = weaponDamage
                 };
                 hitInfo.collider.SendMessage(nameof(IDamageable.TakeDamage), value: dmg, SendMessageOptions.DontRequireReceiver);
+
+                PlayHitEffect(hitInfo.point);
             }
+        }
+
+        private void PlayHitEffect(Vector3 hitPosition)
+        {
+            AutoDisableFX hitEffectObj = _hitEffectVFXPool.GetInactiveObjectFromPool();
+            hitEffectObj.transform.position = hitPosition;
+            hitEffectObj.gameObject.SetActive(true);
         }
         
         private void PlayMuzzleFlash()
         {
-            if (muzzleFlashVFX)
+            foreach (ParticleSystem particle in _muzzleFlashVFXs)
             {
-                muzzleFlashVFX.Play();
+                particle.Play();
             }
         }
     }
