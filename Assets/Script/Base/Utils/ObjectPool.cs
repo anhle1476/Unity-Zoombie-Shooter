@@ -54,7 +54,7 @@ namespace Script.Base.Utils
         {
             foreach (T objInPool in _pool)
             {
-                if (objInPool.gameObject.activeInHierarchy)
+                if (!objInPool.gameObject.activeInHierarchy)
                 {
                     return objInPool;
                 }

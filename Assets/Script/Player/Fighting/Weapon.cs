@@ -25,6 +25,13 @@ namespace Script
         [Range(1, 10000)]
         private int weaponDamage = 30;
 
+        [SerializeField] 
+        [Range(0.01f, 120f)]
+        [Tooltip("The cooldown between 2 shots")]
+        private float firingCooldown = 0.25f;
+
+        private float _lastShotTime;
+
         private AutoDisableFXPool _hitEffectVFXPool;
         
         private void Start()
@@ -47,13 +54,17 @@ namespace Script
         {
             if (Input.GetButton(InputConst.FIRE_1))
             {
-                Shoot();
-                PlayMuzzleFlash();
+                if (Time.time - _lastShotTime > firingCooldown)
+                {
+                    Shoot();
+                    PlayMuzzleFlash();
+                }
             }
         }
 
         private void Shoot()
         {
+            _lastShotTime = Time.time;
             bool isHit = Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out RaycastHit hitInfo, range);
             if (isHit)
             {

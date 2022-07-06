@@ -102,6 +102,7 @@ MonoBehaviour:
   hitEffect: {fileID: 8885718693240441614, guid: dd8ece81a360f3a4ab6e7d806aa68b1f, type: 3}
   range: 100
   weaponDamage: 30
+  firingCooldown: 0.1
 --- !u!1001 &1436711959683234056
 PrefabInstance:
   m_ObjectHideFlags: 0
