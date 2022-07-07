@@ -111,9 +111,9 @@ GameObject:
   - component: {fileID: 3320491316962663089}
   - component: {fileID: 3320491316962663094}
   - component: {fileID: 3320491316962663085}
+  - component: {fileID: 430210664603014542}
   - component: {fileID: 7291209996699933152}
   - component: {fileID: 5433946720124368573}
-  - component: {fileID: 430210664603014542}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -237,6 +237,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   chaseRange: 50
+  turnSpeed: 5
+--- !u!114 &430210664603014542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3320491316962663095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9e9aa617d14b6d850e776490421dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 40
 --- !u!114 &7291209996699933152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,16 +284,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &430210664603014542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3320491316962663095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b9e9aa617d14b6d850e776490421dd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10

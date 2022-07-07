@@ -11,9 +11,11 @@ namespace Script
         [SerializeField]
         [Tooltip("Range to start chasing the target without provoke")]
         private float chaseRange = 15f;
-    
+
+        [SerializeField]
+        private float turnSpeed = 5f;
+        
         private NavMeshAgent _navMeshAgent;
-        private bool _isProvoked;
         private float _distanceToTarget;
 
         private Animator _animator;
@@ -22,6 +24,8 @@ namespace Script
         private static readonly int Attack = Animator.StringToHash("Attack");
 
         public Transform Target => target;
+
+        public bool IsProvoked { get; set; }
 
         // Start is called before the first frame update
         void Start()
@@ -42,10 +46,10 @@ namespace Script
             _distanceToTarget = Vector3.Distance(transform.position, target.position);
             if (_distanceToTarget <= chaseRange)
             {
-                _isProvoked = true;
+                IsProvoked = true;
             }
 
-            if (_isProvoked)
+            if (IsProvoked)
             {
                 EngageTarget();
             }
@@ -72,6 +76,10 @@ namespace Script
         private void AttackTarget()
         {
             _animator.SetBool(Attack, true);
+            // manually update the rotation since we don't set the target for navMeshAgent
+            Vector3 targetDirection = (target.position - transform.position).normalized;
+            Quaternion facingTargetRotation = Quaternion.LookRotation(targetDirection);
+            transform.rotation = Quaternion.Slerp(transform.rotation, facingTargetRotation, Time.deltaTime * turnSpeed);
         }
         
         private void StopAttackTarget()

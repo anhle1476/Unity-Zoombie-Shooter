@@ -11,7 +11,7 @@ namespace Script.Base.Fighting
 
         private bool IsDead => hitPoints <= 0;
 
-        public virtual void TakeDamage(Damage damage)
+        public virtual void TakeDamage(Damage damage) 
         {
             if (IsDead) return;
             
