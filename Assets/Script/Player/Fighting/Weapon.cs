@@ -66,23 +66,23 @@ namespace Script
         {
             _lastShotTime = Time.time;
             bool isHit = Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out RaycastHit hitInfo, range);
-            if (isHit)
+            if (!isHit) return;
+            
+            var dmg = new Damage
             {
-                var dmg = new Damage
-                {
-                    origin = FPCamera.transform.position,
-                    damageAmount = weaponDamage
-                };
-                hitInfo.collider.SendMessage(nameof(IDamageable.TakeDamage), value: dmg, SendMessageOptions.DontRequireReceiver);
+                origin = FPCamera.transform.position,
+                damageAmount = weaponDamage
+            };
+            hitInfo.collider.SendMessage(nameof(IDamageable.TakeDamage), value: dmg, SendMessageOptions.DontRequireReceiver);
 
-                PlayHitEffect(hitInfo.point);
-            }
+            PlayHitEffect(hitInfo);
         }
 
-        private void PlayHitEffect(Vector3 hitPosition)
+        private void PlayHitEffect(RaycastHit hit)
         {
             AutoDisableFX hitEffectObj = _hitEffectVFXPool.GetInactiveObjectFromPool();
-            hitEffectObj.transform.position = hitPosition;
+            hitEffectObj.transform.position = hit.point;
+            hitEffectObj.transform.rotation = Quaternion.LookRotation(hit.normal);
             hitEffectObj.gameObject.SetActive(true);
         }
         

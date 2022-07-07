@@ -16,10 +16,18 @@ namespace Script
         private bool _isProvoked;
         private float _distanceToTarget;
 
+        private Animator _animator;
+        private static readonly int Move = Animator.StringToHash("Move");
+        private static readonly int Idle = Animator.StringToHash("Idle");
+        private static readonly int Attack = Animator.StringToHash("Attack");
+
+        public Transform Target => target;
+
         // Start is called before the first frame update
         void Start()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
+            _animator = GetComponent<Animator>();
         }
 
         private void OnDrawGizmosSelected()
@@ -54,15 +62,26 @@ namespace Script
             {
                 AttackTarget();
             }
+            else
+            {
+                StopAttackTarget();
+            }
         }
 
+        
         private void AttackTarget()
         {
-            Debug.Log(name +  " Attack " + target.name);
+            _animator.SetBool(Attack, true);
+        }
+        
+        private void StopAttackTarget()
+        {
+            _animator.SetBool(Attack, false);
         }
 
         private void ChaseTarget()
         {
+            _animator.SetTrigger(Move);
             _navMeshAgent.SetDestination(target.position);
         }
     }

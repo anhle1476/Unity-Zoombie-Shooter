@@ -2,7 +2,7 @@
 
 namespace Script.Base.Fighting
 {
-    public class Health : MonoBehaviour, IDamageable
+    public abstract class Health : MonoBehaviour, IDamageable
     {
         [SerializeField]
         protected int hitPoints = 100;
@@ -11,13 +11,22 @@ namespace Script.Base.Fighting
 
         private bool IsDead => hitPoints <= 0;
 
-        public void TakeDamage(Damage damage)
+        public virtual void TakeDamage(Damage damage)
         {
+            if (IsDead) return;
+            
             hitPoints -= damage.damageAmount;
             if (IsDead)
             {
                 OnDeath();
             }
+            
+            PostTakeDamage();
+        }
+
+        protected virtual void PostTakeDamage()
+        {
+            
         }
 
         protected virtual void OnDeath()
