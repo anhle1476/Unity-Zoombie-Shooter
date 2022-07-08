@@ -1,5 +1,6 @@
 ﻿using Script.Base.Constants;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 namespace Script.Player.Arsenal
 {
@@ -12,11 +13,26 @@ namespace Script.Player.Arsenal
         [SerializeField]
         private float zoomOutPOV = 60f;
 
+        [SerializeField]
+        private float zoomInMouseXSensitivity = 2f;
+
+        [SerializeField]
+        private float zoomInMouseYSensitivity = 2f;
+
+        [SerializeField]
+        private float zoomOutMouseXSensitivity = 2f;
+
+        [SerializeField]
+        private float zoomOutMouseYSensitivity = 2f;
+
+
         private Camera _camera;
+        private RigidbodyFirstPersonController _fpController;
 
         private void Awake()
         {
             _camera = Camera.main;
+            _fpController = FindObjectOfType<RigidbodyFirstPersonController>();
         }
 
         private void OnEnable()
@@ -39,13 +55,19 @@ namespace Script.Player.Arsenal
         public void WeaponZoomIn()
         {
             _camera.fieldOfView = zoomInPOV;
+            ChangeMouseSensitivity(zoomInMouseXSensitivity, zoomInMouseYSensitivity);
         }
 
         public void WeaponZoomOut()
         {
             _camera.fieldOfView = zoomOutPOV;
+            ChangeMouseSensitivity(zoomOutMouseXSensitivity, zoomOutMouseYSensitivity);
         }
 
-
+        private void ChangeMouseSensitivity(float xSensity, float ySensity)
+        {
+            _fpController.mouseLook.XSensitivity = xSensity;
+            _fpController.mouseLook.YSensitivity = ySensity;
+        }
     }
 }

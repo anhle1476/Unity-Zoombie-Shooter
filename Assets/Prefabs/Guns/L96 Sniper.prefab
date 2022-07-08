@@ -112,3 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomInPOV: 20
   zoomOutPOV: 60
+  zoomInMouseXSensitivity: 1
+  zoomInMouseYSensitivity: 1
+  zoomOutMouseXSensitivity: 2
+  zoomOutMouseYSensitivity: 2
