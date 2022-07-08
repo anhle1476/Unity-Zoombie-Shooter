@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8257387630835241728
+--- !u!1001 &2532414074462785043
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -13,11 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205816154247091192, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.123
+      value: -0.929
       objectReference: {fileID: 0}
     - target: {fileID: 3205816154247091192, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0347
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 3205816154247091192, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26,11 +26,11 @@ PrefabInstance:
     - target: {fileID: 3235307808875145069, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 27a2e426a50f9f74faf91f6a4ad513b1, type: 2}
+      objectReference: {fileID: 2100000, guid: ac814363a1d80b442844a152aaae96a3, type: 2}
     - target: {fileID: 3235307808876242349, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: b3248db90896a6f46a0cdb09d671a88f, type: 3}
+      objectReference: {fileID: 4300000, guid: d78fce1f586605a47ab057832f697a8d, type: 3}
     - target: {fileID: 3235307808877045133, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -77,38 +77,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3235307808877345197, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: m_Name
-      value: Pistol
+      value: L96 Sniper
       objectReference: {fileID: 0}
     - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: range
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: weaponDamage
-      value: 15
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: firingCooldown
-      value: 0.2
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
---- !u!1 &6808946771663645357 stripped
+--- !u!1 &1135732158504351678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3235307808877345197, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
-  m_PrefabInstance: {fileID: 8257387630835241728}
+  m_PrefabInstance: {fileID: 2532414074462785043}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3894409757300246550
+--- !u!114 &5514650593442030507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6808946771663645357}
+  m_GameObject: {fileID: 1135732158504351678}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab54d56f58434496966ef410d63e6dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomInPOV: 55
+  zoomInPOV: 20
   zoomOutPOV: 60

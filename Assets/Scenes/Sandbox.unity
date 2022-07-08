@@ -1026,11 +1026,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc82791328b6afe48bc939076057bd69, type: 3}
---- !u!1 &403746631 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1063914985262609092, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
-  m_PrefabInstance: {fileID: 1063914984652956020}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &411677257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4807,19 +4802,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1063914985262771936, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
   m_PrefabInstance: {fileID: 1063914984652956020}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1689849752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403746631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ac9e43769d4cb3bdd2be2499b7f7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 100
 --- !u!4 &1721475717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 3}
@@ -5522,6 +5504,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 316080144, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
+      propertyPath: weaponSwitchSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1063914985262609092, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5569,6 +5555,22 @@ PrefabInstance:
     - target: {fileID: 1063914985262771936, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193828024042361117, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552782172524962193, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652529973334550087, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410786512712482653, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fea7b580815acfa4f81437ec1ec8eecc, type: 3}

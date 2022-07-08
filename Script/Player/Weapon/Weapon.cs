@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Script.Base.Constants;
@@ -6,7 +5,7 @@ using Script.Base.Fighting;
 using Script.Effects;
 using UnityEngine;
 
-namespace Script
+namespace Script.Player.Weapon
 {
     public class Weapon : MonoBehaviour
     {

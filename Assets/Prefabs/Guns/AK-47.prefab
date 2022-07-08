@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3235307808876242349}
   - component: {fileID: 3235307808875145069}
   - component: {fileID: 5294180764449185488}
+  - component: {fileID: 875978803}
   m_Layer: 0
   m_Name: AK-47
   m_TagString: Untagged
@@ -100,9 +101,24 @@ MonoBehaviour:
   FPCamera: {fileID: 0}
   muzzleFlash: {fileID: 0}
   hitEffect: {fileID: 8885718693240441614, guid: dd8ece81a360f3a4ab6e7d806aa68b1f, type: 3}
-  range: 100
-  weaponDamage: 30
+  range: 300
+  weaponDamage: 20
   firingCooldown: 0.1
+  ammoType: 1
+--- !u!114 &875978803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3235307808877345197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab54d56f58434496966ef410d63e6dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomInPOV: 50
+  zoomOutPOV: 60
 --- !u!1001 &1436711959683234056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4579423207385344752, guid: b5e9ee00633d2a246bea149b59fba94f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: 0.0347
       objectReference: {fileID: 0}
     - target: {fileID: 4579423207385344752, guid: b5e9ee00633d2a246bea149b59fba94f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.022
+      value: 0.0019
       objectReference: {fileID: 0}
     - target: {fileID: 4579423207385344752, guid: b5e9ee00633d2a246bea149b59fba94f, type: 3}
       propertyPath: m_LocalRotation.w
