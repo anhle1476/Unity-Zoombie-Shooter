@@ -1,3 +1,4 @@
+using Script.Player.Fighting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -32,6 +33,11 @@ namespace Script
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
+
+            if (!target)
+            {
+                target = FindObjectOfType<PlayerHealth>().transform;
+            }
         }
 
         private void OnDrawGizmosSelected()
