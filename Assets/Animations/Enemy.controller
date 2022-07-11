@@ -95,7 +95,7 @@ AnimatorStateMachine:
     m_Position: {x: 670, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3549767736634886237}
-    m_Position: {x: 300, y: 10, z: 0}
+    m_Position: {x: 310, y: 10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 500535946716970774}
@@ -104,7 +104,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 50, y: 220, z: 0}
+  m_ExitPosition: {x: 610, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -4244635633513775385}
 --- !u!1101 &-5492444681108807977
@@ -215,7 +215,7 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Death
-    m_Type: 4
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -250,11 +250,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_TransitionDuration: 0.389539
+  m_TransitionOffset: 0.006965582
+  m_ExitTime: 1.3
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -305,7 +305,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 812aae90a9297f249908057eed4c0879, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
