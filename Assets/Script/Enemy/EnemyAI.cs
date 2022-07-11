@@ -29,7 +29,7 @@ namespace Script
         public bool IsProvoked { get; set; }
 
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
@@ -59,6 +59,11 @@ namespace Script
             {
                 EngageTarget();
             }
+        }
+
+        private void OnDisable()
+        {
+            _navMeshAgent.enabled = false;
         }
 
         private void EngageTarget()

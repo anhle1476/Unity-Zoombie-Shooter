@@ -1,5 +1,4 @@
-﻿using System;
-using Script.Base.Fighting;
+﻿using Script.Base.Fighting;
 using UnityEngine;
 
 namespace Script.Enemy
@@ -9,13 +8,16 @@ namespace Script.Enemy
     {
         [SerializeField]
         private int damage;
-        private Transform _target;
+        private EnemyAI _enemyAI;
 
         private void Start()
         {
-            _target = GetComponent<EnemyAI>().Target;
+            _enemyAI = GetComponent<EnemyAI>();
         }
 
+        /// <summary>
+        /// To be called in the enemy attack animation
+        /// </summary>
         private void ApplyDamage()
         {
             var dmg = new Damage
@@ -23,7 +25,7 @@ namespace Script.Enemy
                 origin = transform.position,
                 damageAmount = damage,
             };
-            _target.SendMessage(nameof(IDamageable.TakeDamage), dmg, SendMessageOptions.DontRequireReceiver);
+            _enemyAI.Target.SendMessage(nameof(IDamageable.TakeDamage), dmg, SendMessageOptions.DontRequireReceiver);
         }
     }
 }
