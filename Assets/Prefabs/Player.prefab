@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1689849752}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,6 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8776400284197001971}
   - component: {fileID: 316080144}
+  - component: {fileID: 1215718158}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -368,6 +369,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons: []
   weaponSwitchSpeed: 10
+--- !u!114 &1215718158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607115551819788044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4187d7e88f9e4014ea4f9ea1d79cd8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantityDict:
+    keys: 00000000010000000200000003000000
+    values: 00000000000000000000000000000000
+  defaultAmmoAmount: 20
 --- !u!1001 &1157406466313243882
 PrefabInstance:
   m_ObjectHideFlags: 0
