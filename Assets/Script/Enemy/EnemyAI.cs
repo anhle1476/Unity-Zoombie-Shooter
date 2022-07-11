@@ -1,4 +1,4 @@
-using Script.Player.Fighting;
+using Script.Player;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,7 +15,7 @@ namespace Script
 
         [SerializeField]
         private float turnSpeed = 5f;
-        
+
         private NavMeshAgent _navMeshAgent;
         private float _distanceToTarget;
 
@@ -78,7 +78,7 @@ namespace Script
             }
         }
 
-        
+
         private void AttackTarget()
         {
             _animator.SetBool(Attack, true);
@@ -87,7 +87,7 @@ namespace Script
             Quaternion facingTargetRotation = Quaternion.LookRotation(targetDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, facingTargetRotation, Time.deltaTime * turnSpeed);
         }
-        
+
         private void StopAttackTarget()
         {
             _animator.SetBool(Attack, false);

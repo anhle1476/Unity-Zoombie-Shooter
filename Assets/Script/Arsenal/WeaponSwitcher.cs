@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Script.Player.Arsenal
+namespace Script.Arsenal
 {
     public class WeaponSwitcher : MonoBehaviour
     {
@@ -16,6 +16,8 @@ namespace Script.Player.Arsenal
         private int _currentWeaponIndex = 0;
 
         private float _accumulatedSwitchValue = 0;
+
+        public Weapon CurrentWeapon => weapons.ElementAt(_currentWeaponIndex);
 
         void Start()
         {

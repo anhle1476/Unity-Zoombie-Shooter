@@ -1,13 +1,14 @@
-﻿using System;
-using Script.Base.Fighting;
+﻿using Script.Base.Fighting;
 using Script.Base.Utils;
 using UnityEngine;
 
-namespace Script.Player.Fighting
+namespace Script.Player
 {
     public class PlayerHealth : Health
     {
         private DeathHandler _deathHandler;
+
+        public DeathHandler DeathHandler { get; set; }
 
         private void Start()
         {

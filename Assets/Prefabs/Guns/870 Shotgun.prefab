@@ -92,12 +92,24 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
+      propertyPath: ammoType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
+      propertyPath: magazineSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: weaponDamage
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: firingCooldown
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
+      propertyPath: reloadCooldown
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
@@ -120,3 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomInPOV: 50
   zoomOutPOV: 60
+  zoomInMouseXSensitivity: 2
+  zoomInMouseYSensitivity: 2
+  zoomOutMouseXSensitivity: 2
+  zoomOutMouseYSensitivity: 2

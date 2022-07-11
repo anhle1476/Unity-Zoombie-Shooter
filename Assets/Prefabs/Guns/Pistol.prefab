@@ -84,6 +84,14 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
+      propertyPath: ammoType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
+      propertyPath: magazineSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: weaponDamage
       value: 15
       objectReference: {fileID: 0}
@@ -112,3 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomInPOV: 55
   zoomOutPOV: 60
+  zoomInMouseXSensitivity: 2
+  zoomInMouseYSensitivity: 2
+  zoomOutMouseXSensitivity: 2
+  zoomOutMouseYSensitivity: 2

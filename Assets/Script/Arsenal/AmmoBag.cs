@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
-namespace Script.Player.Arsenal
+namespace Script.Arsenal
 {
     public class AmmoBag : MonoBehaviour
     {
@@ -11,11 +12,12 @@ namespace Script.Player.Arsenal
         [Range(0, 1000)]
         private int defaultAmmoAmount = 20;
 
+        public AmmoQuantityDictionary AmmoQuantity => quantityDict;
 
         // Use this for initialization
         void Start()
         {
-            foreach (var ammoType in quantityDict.Keys)
+            foreach (var ammoType in quantityDict.Keys.ToList())
             {
                 quantityDict.CollectAmmo(ammoType, defaultAmmoAmount);
             }

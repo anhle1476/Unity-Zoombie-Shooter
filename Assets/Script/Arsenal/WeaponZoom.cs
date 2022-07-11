@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
-namespace Script.Player.Arsenal
+namespace Script.Arsenal
 {
     [RequireComponent(typeof(Weapon))]
     public class WeaponZoom : MonoBehaviour

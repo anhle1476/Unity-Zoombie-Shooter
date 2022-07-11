@@ -1,7 +1,7 @@
 ﻿using Script.Base.Collections;
 using System;
 
-namespace Script.Player.Arsenal
+namespace Script.Arsenal
 {
     [Serializable]
     public class AmmoQuantityDictionary : SerializableDictionary<AmmoType, int>

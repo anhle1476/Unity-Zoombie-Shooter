@@ -84,12 +84,24 @@ PrefabInstance:
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
+      propertyPath: ammoType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
+      propertyPath: magazineSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: weaponDamage
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
       propertyPath: firingCooldown
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294180764449185488, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
+      propertyPath: reloadCooldown
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbbbee5cad94b84db1fc4bb1cefaf27, type: 3}
