@@ -104,7 +104,6 @@ namespace Script.Arsenal
                 if (Time.time - _lastShotTime > firingCooldown)
                 {
                     Shoot();
-                    PlayMuzzleFlash();
                 }
             }
 
@@ -122,6 +121,8 @@ namespace Script.Arsenal
                 return;
 
             _remainingAmmo--;
+
+            PlayMuzzleFlash();
 
             _lastShotTime = Time.time;
             bool isHit = Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out RaycastHit hitInfo, range);
